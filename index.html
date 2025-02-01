@@ -195,6 +195,17 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"Form","t
   <script>
     JotForm.showJotFormPowered = "0";
   </script>
+	<script>
+        // Listen for messages from the Body Map iFrame
+        window.addEventListener("message", function(event) {
+            if (event.data.selectedPlacement) {
+                let inputField = document.getElementById("selectedPlacement");
+                if (inputField) {
+                    inputField.value = event.data.selectedPlacement;
+                }
+            }
+        }, false);
+    </script>
   <script>
     JotForm.poweredByText = "Powered by Jotform";
   </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="250295484302051" />
@@ -205,16 +216,5 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"Form","t
       all_spc[i].value = "250295484302051-250295484302051";
     }
   </script>
-</form>
-<script>
-    window.addEventListener("message", function(event) {
-        if (event.data.selectedPlacement) {
-            let inputField = document.querySelector("[name='q5_selectedPlacement']");
-            if (inputField) {
-                inputField.value = event.data.selectedPlacement;
-            }
-        }
-    }, false);
-</script>
-</body>
+</form></body>
 </html><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
