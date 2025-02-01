@@ -205,5 +205,13 @@ JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"Form","t
       all_spc[i].value = "250295484302051-250295484302051";
     }
   </script>
+  window.addEventListener("message", function(event) {
+    if (event.data && event.data.selectedPlacement) {
+        var inputField = document.getElementById("input_5");
+        if (inputField) {
+            inputField.value = event.data.selectedPlacement;
+        }
+    }
+}, false);
 </form></body>
 </html><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
